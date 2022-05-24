@@ -1,0 +1,37 @@
+Problema 2
+a ) Monitoramento do modelo: como você iria monitorar o desempenho do seu modelo
+    ao longo do tempo, com a finalidade de checar se o modelo continua fornecendo um
+    bom resultado meses depois de implantado? Como você iria monitorar as variáveis de
+    entrada que o modelo está recebendo em produção, com a finalidade de checar se o
+    conceito delas está se alterando ao longo do tempo, ficando diferente dos dados
+    utilizados no treinamento? Como você automatizaria esses monitoramentos, de forma
+    a te ajudar a monitorar diversos modelos simultaneamente?
+
+
+R:
+        Estatística, com teste de hipotese para validar se a saida esperada do modelo e a saida real 
+    estão dentro de uma margen de erro aceitável, além de parametros básico como média e desvio padrão.
+    Com relação a  monitorar as variáveis:
+        1. Verificar se os valores estão dentro do estabelecido, no momento de criar o modelo,por exemplo
+        se as entradas obedecem os parametros de variáveis categóricas e  numéricas;
+        2. Não, tem como fugir, mas verifica se o novo conjunto de dados recebido esta de arcodo
+        com o que o modelo foi treinado.
+    Por último, a automatização para o monitoramento não é uma tarefa simples, para este caso específico
+    será necessário a participação de outras pessoas envolvidas no projeto, inclusive com a construção
+    de um repositório no qual os dados possam ser recebido e analizados de forma simples, porém a regulamente
+    pela equipe.podemos implementar testes estatísticos completos para comparar a distribuição das caracteristicas
+    de entrada, formulações de script para alerta de variação dos dados. mas ainda sim, uma tarefa em conjunto com outros
+    profissionais.
+    
+
+b)Transferência do projeto para um departamento de operações: Depois de colocar em
+produção este projeto, você começará a receber novas demandas e, por causa disso,
+não conseguirá ficar 100% destinado na sustentação dele em produção. Como você
+iria repassar o conhecimento do projeto para uma equipe focada na sustentação,
+assumindo que essa equipe não possui (e nem precisa ter) conhecimento técnico
+envolvendo o modelo que eles estarão sustentando, de forma que eles consigam
+manter o projeto sem precisar pedir a sua ajuda?
+
+    Se houver o monitoramento báscio automatizado, a geração de alertas pode auxiliar na identificação
+    de problemas básicos como entrada incorreta de dados, valores discrepantes que podem sinalizar problemas 
+    tanto de entrada como do próprio modelo. 
